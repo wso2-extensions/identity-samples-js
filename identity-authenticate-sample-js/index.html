@@ -38,6 +38,13 @@
     </div>
 
     <div id="logged-out-view" style="display:none;">
+        <h1>
+            Javascript Based Authentication Sample (OIDC - Autherization Code)
+        </h1>
+        <h2>
+            Sample Demo to showcase how to authenticate a simple client side application by 
+            <b>WSO2 Identity Server</b> using <b>WSO2 Identity Javacript OIDC SDK</b>
+        </h2>
         <button onClick="handleLogin()">Login</button>
     <div>
     
@@ -46,12 +53,23 @@
 
         var webAppOrigin = "http://localhost:5000";
 
-        var authConfig = {
+        const authConfig = {
+            // Web App URL
             clientHost: webAppOrigin,
+
+            // ClientID generated for the application
             clientID: "uxRd9AqFa3Blp1ASvKYaUizU7pca",
-            loginCallbackURL: webAppOrigin,
+
+            // After login callback URL - We have use app root as this is a SPA 
+            // (Add it in application OIDC settings "Callback Url")
+            loginCallbackURL: webAppOrigin, 
+
+            // After logout callback URL - We have use app root as this is a SPA 
+            // (Add it in application OIDC settings "Callback Url")
             logoutCallbackURL: webAppOrigin,
-            serverOrigin: "https://localhost:9443",
+
+            // WSO2 Identity Server URL
+            serverOrigin: "https://localhost:9443"
         };
 
     </script>
