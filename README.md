@@ -2,7 +2,7 @@
 
 Javascript SDKs usage exmaples
 
-- identity-authenticate-sample-js - [README](identity-authenticate-sample-js/README.md)
+- [identity-authenticate-sample-js](identity-authenticate-sample-js/)
 
 ## License
 
