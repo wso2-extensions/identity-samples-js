@@ -27,30 +27,34 @@
     <link href="app.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div id="missing-config" style="display:none;">
-        <h2>You need to update the CLient ID before proceed.</h2>
+    <div class="container">
+        <div id="missing-config" style="display:none;">
+            <h2>You need to update the Client ID to proceed.</h2>
+            <p>Please open the "index.html" file using an text editor, and update the `clientID` value in the `authConfig` object.</p>
+            <p>Visit repo <a href="#">README</a> for more details.</p>
+        </div>
+
+        <div id="logged-in-view" style="display:none;">
+            <ul>
+                <li>Name: <span id="text-display-name"></span></li>
+                <li>Username: <span id="text-userame"></span></li>
+                <li>Email: <span id="text-email"></span></li>
+            </ul>
+
+            <button class="btn primary" onClick="handleLogout()">Logout</button>
+        </div>
+
+        <div id="logged-out-view" style="display:none;">
+            <h1>
+                Javascript Based Authentication Sample <br> (OIDC - Autherization Code)
+            </h1>
+            <h3>
+                Sample Demo to showcase how to authenticate a simple client side application by 
+                <b>WSO2 Identity Server</b> using <b>WSO2 Identity Javacript OIDC SDK</b>
+            </h3>
+            <button class="btn primary" onClick="handleLogin()">Login</button>
+        <div>
     </div>
-
-    <div id="logged-in-view" style="display:none;">
-        <ul>
-            <li>Name: <span id="text-display-name"></span></li>
-            <li>Username: <span id="text-userame"></span></li>
-            <li>Email: <span id="text-email"></span></li>
-        </ul>
-
-        <button onClick="handleLogout()">Logout</button>
-    </div>
-
-    <div id="logged-out-view" style="display:none;">
-        <h1>
-            Javascript Based Authentication Sample (OIDC - Autherization Code)
-        </h1>
-        <h2>
-            Sample Demo to showcase how to authenticate a simple client side application by 
-            <b>WSO2 Identity Server</b> using <b>WSO2 Identity Javacript OIDC SDK</b>
-        </h2>
-        <button onClick="handleLogin()">Login</button>
-    <div>
     
     <script type="application/javascript" src="lib/wso2-identity-oidc.standalone.js"></script>
     <script>
@@ -62,7 +66,7 @@
             clientHost: webAppOrigin,
 
             // ClientID generated for the application
-            clientID: "",
+            clientID: "uxRd9AqFa3Blp1ASvKYaUizU7pca",
 
             // After login callback URL - We have use app root as this is a SPA 
             // (Add it in application OIDC settings "Callback Url")
