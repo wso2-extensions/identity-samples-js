@@ -6,7 +6,7 @@ Vanilla JS authentication usage sample app
 
 ## Getting started
 
-Need to allow external URL in **`[wso2-is]/repository/resources/conf/templates/repository/conf/tomcat/web.xml.j2`**
+First thing we need to do is let WSO2 Identity Server knows that we are accessing the server using a external origin (CORS). Add below lines to the **`[wso2-is]/repository/resources/conf/templates/repository/conf/tomcat/web.xml.j2`**
 
 ```xml
 <filter>

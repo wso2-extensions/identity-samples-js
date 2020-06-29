@@ -27,6 +27,10 @@
     <link href="app.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+    <div id="missing-config" style="display:none;">
+        <h2>You need to update the CLient ID before proceed.</h2>
+    </div>
+
     <div id="logged-in-view" style="display:none;">
         <ul>
             <li>Name: <span id="text-display-name"></span></li>
@@ -58,7 +62,7 @@
             clientHost: webAppOrigin,
 
             // ClientID generated for the application
-            clientID: "uxRd9AqFa3Blp1ASvKYaUizU7pca",
+            clientID: "",
 
             // After login callback URL - We have use app root as this is a SPA 
             // (Add it in application OIDC settings "Callback Url")
