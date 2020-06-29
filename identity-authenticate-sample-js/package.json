@@ -1,0 +1,12 @@
+{
+    "name": "@wso2/identity-authenticate-sample-js",
+    "version": "0.1.0",
+    "description": "Javascript Authentication Sample for WSO2 Identity Server",
+    "main": "index.js",
+    "author": "WSO2",
+    "license": "Apache-2.0",
+    "private": "false",
+    "devDependencies": {
+        "serve": "^11.3.2"
+    }
+}
