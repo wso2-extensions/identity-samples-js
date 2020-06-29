@@ -37,8 +37,17 @@ h1 b, h2 b, h3 b, h4 b, h5 b {
     background: #fff;
     width: 789px;
     margin: 0 auto;
-    padding: 50px;
     margin-top: 50px;
+}
+
+.header-title {
+    background-color: #ff5000;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.content {
+    padding: 50px;
 }
 
 .btn.primary, .btn.primary:active {
@@ -54,4 +63,5 @@ h1 b, h2 b, h3 b, h4 b, h5 b {
     cursor: pointer;
     -webkit-text-size-adjust: none;
     padding: .78571429em 1.5em .78571429em;
+    margin-top: 30px;
 }

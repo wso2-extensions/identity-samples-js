@@ -28,31 +28,44 @@
 </head>
 <body>
     <div class="container">
+        
         <div id="missing-config" style="display:none;">
-            <h2>You need to update the Client ID to proceed.</h2>
-            <p>Please open the "index.html" file using an text editor, and update the `clientID` value in the `authConfig` object.</p>
-            <p>Visit repo <a href="#">README</a> for more details.</p>
+            <div class="content">
+                <h2>You need to update the Client ID to proceed.</h2>
+                <p>Please open the "index.html" file using an text editor, and update the `clientID` value in the `authConfig` object.</p>
+                <p>Visit repo <a href="#">README</a> for more details.</p>
+            </div>
         </div>
 
         <div id="logged-in-view" style="display:none;">
-            <ul>
-                <li>Name: <span id="text-display-name"></span></li>
-                <li>Username: <span id="text-userame"></span></li>
-                <li>Email: <span id="text-email"></span></li>
-            </ul>
-
-            <button class="btn primary" onClick="handleLogout()">Logout</button>
+            <div class="header-title">
+                <h1>
+                    Javascript Based Authentication Sample <br> (OIDC - Autherization Code)
+                </h1>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Name: <span id="text-display-name"></span></li>
+                    <li>Username: <span id="text-userame"></span></li>
+                    <li>Email: <span id="text-email"></span></li>
+                </ul>
+                <button class="btn primary" onClick="handleLogout()">Logout</button>
+            </div>
         </div>
 
         <div id="logged-out-view" style="display:none;">
-            <h1>
-                Javascript Based Authentication Sample <br> (OIDC - Autherization Code)
-            </h1>
-            <h3>
-                Sample Demo to showcase how to authenticate a simple client side application by 
-                <b>WSO2 Identity Server</b> using <b>WSO2 Identity Javacript OIDC SDK</b>
-            </h3>
-            <button class="btn primary" onClick="handleLogin()">Login</button>
+            <div class="header-title">
+                <h1>
+                    Javascript Based Authentication Sample <br> (OIDC - Autherization Code)
+                </h1>
+            </div>
+            <div class="content">
+                <h3>
+                    Sample Demo to showcase how to authenticate a simple client side application by 
+                    <b>WSO2 Identity Server</b> using <b>WSO2 Identity Javacript OIDC SDK</b>
+                </h3>
+                <button class="btn primary" onClick="handleLogin()">Login</button>
+            </div>
         <div>
     </div>
     
