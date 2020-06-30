@@ -33,11 +33,47 @@ h1 b, h2 b, h3 b, h4 b, h5 b {
     font-weight: 400;
 }
 
+b {
+    font-weight: 500;
+}
+
+a {
+    color: #ff5000;
+}
+
+a:hover {
+    text-decoration: none;;
+}
+
+img.home-image {
+    max-width: 60%;
+}
+
+img.footer-image {
+    width: 150px;
+    margin-top: 30px;
+    opacity: .8;
+}
+
+code {
+    background: #eee;
+    padding: 4px;
+    font-size: 90%;
+    color: #ff0000;
+}
+
 .container {
     background: #fff;
     width: 789px;
     margin: 0 auto;
     margin-top: 50px;
+    border-radius: 3px;
+}
+
+.details {
+    text-align: left;
+    display: inline-block;
+    margin-left: -30px;
 }
 
 .header-title {
@@ -50,7 +86,9 @@ h1 b, h2 b, h3 b, h4 b, h5 b {
     padding: 50px;
 }
 
-.btn.primary, .btn.primary:active {
+.btn.primary,
+.btn.primary:active,
+.btn.primary:focus {
     background-color: #ff5000;
     border-radius: 3px;
     border: none;
@@ -64,4 +102,5 @@ h1 b, h2 b, h3 b, h4 b, h5 b {
     -webkit-text-size-adjust: none;
     padding: .78571429em 1.5em .78571429em;
     margin-top: 30px;
+    outline: none;
 }
