@@ -16,48 +16,47 @@
  * under the License.
  */
 
+var authClient = new IdentityOIDC.IdentityAuth(authConfig);
+
+var state = {
+    isAuth: false,
+    displayName: "",
+    email: "",
+    username: ""
+};
+
+function updateView() {
+    if (state.isAuth) {
+        document.getElementById("text-display-name").innerHTML = state.displayName;
+        document.getElementById("text-userame").innerHTML = state.username;
+        document.getElementById("text-email").innerHTML = state.email;
+
+        document.getElementById("logged-in-view").style.display = "block";
+        document.getElementById("logged-out-view").style.display = "none";
+    } else {
+        document.getElementById("logged-in-view").style.display = "none";
+        document.getElementById("logged-out-view").style.display = "block";
+    }
+}
+
+function handleLogin() {
+    // Add a check property to the session, so we can recall signin method upon redirect with autherization code.
+    // autherization code grant type flow
+    sessionStorage.setItem("isInitLogin", "true");
+    authClient.signIn();
+}
+
+function handleLogout() {
+    authClient.signOut(function() {
+        state.isAuth = false;
+    }).then(function() {
+        updateView();
+    });
+}
+
 if (authConfig.clientID === "") {
     document.getElementById("missing-config").style.display = "block";
-}
-else {
-    var authClient = new IdentityOIDC.IdentityAuth(authConfig);
-
-    var state = {
-        isAuth: false,
-        displayName: "",
-        email: "",
-        username: ""
-    };
-
-    function updateView() {
-        if (state.isAuth) {
-            document.getElementById("text-display-name").innerHTML = state.displayName;
-            document.getElementById("text-userame").innerHTML = state.username;
-            document.getElementById("text-email").innerHTML = state.email;
-
-            document.getElementById("logged-in-view").style.display = "block";
-            document.getElementById("logged-out-view").style.display = "none";
-        } else {
-            document.getElementById("logged-in-view").style.display = "none";
-            document.getElementById("logged-out-view").style.display = "block";
-        }
-    }
-
-    function handleLogin() {
-        // Add a check property to the session, so we can recall signin method upon redirect with autherization code.
-        // autherization code grant type flow
-        sessionStorage.setItem("isInitLogin", "true");
-        authClient.signIn();
-    }
-
-    function handleLogout() {
-        authClient.signOut(function() {
-            state.isAuth = false;
-        }).then(() => {
-            updateView();
-        });
-    }
-
+} else {
     // Check if the page redirected by the signin method with autherization code, if it is recall singin method to
     // continue the sigin flow
     if ( JSON.parse(sessionStorage.getItem("isInitLogin")) ) {
@@ -81,12 +80,12 @@ else {
             state.displayName = sessionStorage.getItem("display_name");
             state.email = JSON.parse(sessionStorage.getItem("email")) ?
                 JSON.parse(sessionStorage.getItem("email"))[0] : "";
-            state.username = sessionStorage.getItem("username")
+            state.username = sessionStorage.getItem("username");
             state.isAuth = true;
 
             updateView();
+        } else {
+            updateView();
         }
     }
-
-    updateView();
 }
