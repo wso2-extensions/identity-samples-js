@@ -3,6 +3,7 @@
 Javascript SDKs usage exmaples
 
 - [identity-authenticate-sample-js](identity-authenticate-sample-js/)
+- [identity-authenticate-sample-js-spa](identity-authenticate-sample-js-spa/)
 
 ## License
 
