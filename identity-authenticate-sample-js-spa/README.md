@@ -1,6 +1,6 @@
-# WSO2 Identity Server - OIDC SDK Vanilla Javascript Usage Example
+# WSO2 Identity Server - OIDC JS SDK React SPA Usage Example
 
-Vanilla JS authentication usage sample app
+React JS authentication JS SDK usage sample app
 
 ---
 
@@ -14,7 +14,7 @@ First thing we need to do is let WSO2 Identity Server knows that we are accessin
     <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
     <init-param>
         <param-name>cors.allowOrigin</param-name>
-        <param-value>https://localhost:5000</param-value>
+        <param-value>https://localhost:3000</param-value>
     </init-param>
     <init-param>
         <param-name>cors.supportedMethods</param-name>
@@ -37,7 +37,7 @@ First thing we need to do is let WSO2 Identity Server knows that we are accessin
 ### Runnig the sample
 
 1. Run `yarn install`
-2. Update your configurations in `index.html` with WSO2 Identity Server App Register details.
+2. Update your configurations in `src/app.js` with WSO2 Identity Server App Register details.
 
     E.g.
 
@@ -49,8 +49,8 @@ First thing we need to do is let WSO2 Identity Server knows that we are accessin
     };
     ```
 
-3. run `yarn serve`
-4. Visit `http://localhost:5000` on browser
+3. run `yarn start`
+4. Visit `http://localhost:3000` on browser
 
 ## License
 
