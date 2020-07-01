@@ -67,7 +67,7 @@ const authConfig = {
     clientHost: webAppOrigin,
 
     // ClientID generated for the application
-    clientID: "PGmwC7K11l0hJCG6OdJQzTEPVTca",
+    clientID: "",
 
     // After login callback URL - We have use app root as this is a SPA 
     // (Add it in application OIDC settings "Callback Url")
@@ -80,8 +80,9 @@ const authConfig = {
     // WSO2 Identity Server URL
     serverOrigin: "https://localhost:9443",
 
-    tenant: "wow.com",
-    tenantPath: "/t/wow.com"
+    // Tenant Details: Enable if needed only
+    // tenant: "demo.com",
+    // tenantPath: "/t/demo.com"
 };
 
 const authClient = new IdentityAuth(authConfig);
