@@ -21,7 +21,7 @@
         "start": "webpack-dev-server --mode development --inline --hot --open"
     },
     "dependencies": {
-        "@wso2/identity-oidc-js": "0.1.0",
+        "@wso2/identity-oidc-js": "^0.1.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1"
     },

@@ -49,7 +49,7 @@ First thing we need to do is let WSO2 Identity Server knows that we are accessin
     };
     ```
 
-3. run `yarn serve`
+3. run `yarn start`
 4. Visit `http://localhost:5000` on browser
 
 ## License
