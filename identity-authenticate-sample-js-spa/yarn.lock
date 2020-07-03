@@ -1092,8 +1092,10 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@wso2/identity-oidc-js@file:../../identity-sdks-js/identity-oidc-js":
+"@wso2/identity-oidc-js@^0.1.0":
   version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@wso2/identity-oidc-js/-/identity-oidc-js-0.1.0.tgz#a477945bd7702e201865ba585540a6895379f9d7"
+  integrity sha512-bM8a6QjaaQ7JYtNRtiSucZDmoYkQEtitqr0MbCB/M1AySRewtJbGshyxYYdtP2tlTCyoHmNxjTOiEWLVvG2V2w==
   dependencies:
     await-semaphore "^0.1.3"
     axios "^0.19.2"
