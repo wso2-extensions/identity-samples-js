@@ -6,6 +6,9 @@
     "author": "WSO2",
     "license": "Apache-2.0",
     "private": "false",
+    "scripts": {
+        "start": "yarn serve"
+    },
     "devDependencies": {
         "serve": "^11.3.2"
     }
