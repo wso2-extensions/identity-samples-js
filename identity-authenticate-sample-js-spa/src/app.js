@@ -19,73 +19,14 @@
 import React, { useEffect, useState } from "react";
 import * as ReactDOM from "react-dom";
 import "./app.css";
-import HOME_IMAGE from "./images/home.png";
+import REACT_LOGO from "./images/react-logo.png";
+import JS_LOGO from "./images/js-logo.png";
 import FOOTER_LOGOS from "./images/footer.png";
 // Import WSO2 Identity Server OIDC JS module
 import { IdentityAuth } from "@wso2/identity-oidc-js";
+import * as authConfig from "./config.json";
 
-/* Need to allow URL in wso2-is-distrubution/repository/conf/tomcat/web.xml
-
-    <filter>
-        <filter-name>CORS</filter-name>
-        <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
-        <init-param>
-            <param-name>cors.allowOrigin</param-name>
-            <param-value>https://localhost:3000</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cors.supportedMethods</param-name>
-            <param-value>GET, HEAD, POST, DELETE, OPTIONS, PATCH, PUT</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cors.exposedHeaders</param-name>
-            <param-value>Location</param-value>
-        </init-param>
-    </filter>
-
-    <filter-mapping>
-        <filter-name>CORS</filter-name>
-        <url-pattern>/*</url-pattern>
-        <dispatcher>REQUEST</dispatcher>
-        <dispatcher>FORWARD</dispatcher>
-    </filter-mapping>
-*/
-
-const webAppOrigin = "http://localhost:3000";
-
-/**
- * Initialize identityManager client
- * 
- * ( Need to register an application in WSO2 Identity Server and make changes in:
- *   Inbound Authentication Configuration > OAuth/OpenID Connect Configuration )
- * 
- *  Enable "Allow authentication without the client secret" in application OIDC settings to skip ClientSecret
- *  And select "Cookie Based" Access Token Binding Type
- */
-const authConfig = {
-    // Web App URL
-    clientHost: webAppOrigin,
-
-    // ClientID generated for the application
-    clientID: "",
-
-    // After login callback URL - We have use app root as this is a SPA 
-    // (Add it in application OIDC settings "Callback Url")
-    loginCallbackURL: webAppOrigin, 
-
-    // After logout callback URL - We have use app root as this is a SPA 
-    // (Add it in application OIDC settings "Callback Url")
-    logoutCallbackURL: webAppOrigin,
-
-    // WSO2 Identity Server URL
-    serverOrigin: "https://localhost:9443",
-
-    // Tenant Details: Enable if needed only
-    // tenant: "demo.com",
-    // tenantPath: "/t/demo.com"
-};
-
-const authClient = new IdentityAuth(authConfig);
+const authClient = new IdentityAuth(authConfig.default);
 
 const App = () => {
 
@@ -145,7 +86,13 @@ const App = () => {
     return (
         <>
             <div className="container">
-                { isAuth ?
+                { authConfig.default.clientID === "" ?
+                    <div className="content">
+                        <h2>You need to update the Client ID to proceed.</h2>
+                        <p>Please open "src/config.json" file using an text editor, and update the <code>clientID</code> value with registered app clientID.</p>
+                        <p>Visit repo <a href="https://github.com/wso2-extensions/identity-samples-js/tree/master/identity-authenticate-sample-js-spa">README</a> for more details.</p>
+                    </div>
+                : isAuth ?
                     <>
                         <div className="header-title">
                             <h1>
@@ -172,7 +119,11 @@ const App = () => {
                             </h1>
                         </div>
                         <div className="content">
-                            <img src={ HOME_IMAGE } className="home-image" />
+                            <div className="home-image">
+                                <img src={ JS_LOGO } className="js-logo-image logo" />
+                                <span className="logo-plus">+</span>
+                                <img src={ REACT_LOGO } className="react-logo-image logo" />
+                            </div>
                             <h3>
                                 Sample demo to showcase how to authenticate a simple client side application using <b>WSO2 Identity Server</b> with the <a href="https://github.com/wso2-extensions/identity-sdks-js/tree/master/identity-oidc-js" 
                                     target="_blank">OIDC JS SDK</a>
