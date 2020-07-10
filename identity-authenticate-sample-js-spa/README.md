@@ -35,7 +35,7 @@ Add below lines to the **`[wso2-is]/repository/resources/conf/templates/reposito
 </filter-mapping>
 ```
 
-### 1. Register an Applications
+### 1. Register an Application
 
 Run Developer Portal and register a Single Page Application with minimal configuration. 
 Give `http://localhost:5000` as the callback URL.
