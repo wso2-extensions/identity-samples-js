@@ -42,8 +42,8 @@ Give `http://localhost:5000` as the callback URL.
 
 ### 2. Setup the sample
 
-* Run `yarn` or `npm install`
-* Update configuration file `src/config.json` with your registered app details
+* Run `yarn` or `npm install`.
+* Update configuration file `src/config.json` with your registered app details.
 
     __REFERENCE__
 
@@ -65,7 +65,7 @@ Give `http://localhost:5000` as the callback URL.
 ### 3. Run
 
 * Run `yarn start` or `npm start` if you use `npm` instead `yarn` for dependencies install.
-* Navigate to `http://localhost:5000` from the browser
+* Navigate to `http://localhost:5000` from the browser.
 
 ## License
 
