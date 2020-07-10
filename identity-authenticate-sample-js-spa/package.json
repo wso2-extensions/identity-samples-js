@@ -1,6 +1,6 @@
 {
     "name": "@wso2/identity-authenticate-sample-js-spa",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "React based sample SPA to demostrate WSO2 Indentity Server OIDC Javascript SDK module usage",
     "keywords": [
         "WSO2",
