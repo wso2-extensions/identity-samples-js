@@ -1,6 +1,6 @@
-# WSO2 Identity Server - OIDC JS SDK React SPA Usage Example
+# WSO2 Identity Server - OIDC JS-SDK Usage Example (React SPA)
 
-React JS authentication JS SDK usage sample app
+WSO2 Identity Server Integration exmaple using the OIDC JS SDK. Sample is written using React.
 
 ---
 
