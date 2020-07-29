@@ -96,7 +96,7 @@ const App = () => {
                     <>
                         <div className="header-title">
                             <h1>
-                                Javascript Based React SPA Authentication Sample <br /> (OIDC - Autherization Code Grant)
+                                Javascript Based React SPA Authentication Sample <br /> (OIDC - Authorization Code Grant)
                             </h1>
                         </div>
                         <div className="content">
@@ -115,7 +115,7 @@ const App = () => {
                     <>
                         <div className="header-title">
                             <h1>
-                                Javascript Based React SPA Authentication Sample <br /> (OIDC - Autherization Code Grant)
+                                Javascript Based React SPA Authentication Sample <br /> (OIDC - Authorization Code Grant)
                             </h1>
                         </div>
                         <div className="content">
