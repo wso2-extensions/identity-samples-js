@@ -3,5 +3,5 @@
     "clientID": "",
     "loginCallbackURL": "http://localhost:5000",
     "logoutCallbackURL": "http://localhost:5000",
-    "serverOrigin": "https://devcloud.asgardio.io"
+    "serverOrigin": "https://localhost:9443"
 }
