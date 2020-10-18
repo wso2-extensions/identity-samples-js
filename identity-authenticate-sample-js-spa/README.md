@@ -6,7 +6,7 @@ WSO2 Identity Server Integration example using the OIDC JS SDK. Sample is writte
 
 ## Getting started
 
-**NOTE:- Ignore this if you are connecting to Asgardio cloud. In Asgardio you can add `http://localhost5000` allow origin from the UI**
+**NOTE:- Ignore this if you are connecting to Asgardio cloud. In Asgardio cloud you can add `http://localhost5000` to allow origins from the UI**
 
 First thing we need to do is let WSO2 Identity Server knows that we are accessing the server using a external origin (CORS). 
 Add below lines to the **`[wso2-is]/repository/resources/conf/templates/repository/conf/tomcat/web.xml.j2`**
