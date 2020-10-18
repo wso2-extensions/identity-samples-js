@@ -40,8 +40,8 @@ function updateView() {
 }
 
 function handleLogin() {
-    // Add a check property to the session, so we can recall signin method upon redirect with autherization code.
-    // autherization code grant type flow
+    // Add a check property to the session, so we can recall sign-in method upon redirect with authorization code.
+    // authorization code grant type flow
     sessionStorage.setItem("isInitLogin", "true");
     authClient.signIn();
 }
@@ -57,8 +57,8 @@ function handleLogout() {
 if (authConfig.clientID === "") {
     document.getElementById("missing-config").style.display = "block";
 } else {
-    // Check if the page redirected by the signin method with autherization code, if it is recall singin method to
-    // continue the sigin flow
+    // Check if the page redirected by the sign-in method with authorization code, if it is recall sing-in method to
+    // continue the sign-in flow
     if ( JSON.parse(sessionStorage.getItem("isInitLogin")) ) {
 
         authClient.signIn().then(function(response) {

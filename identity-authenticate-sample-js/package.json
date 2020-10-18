@@ -1,11 +1,24 @@
 {
-    "name": "@wso2/identity-authenticate-sample-js",
+    "name": "@asgardio/identity-authenticate-sample-js",
     "version": "0.1.0",
-    "description": "Javascript Authentication Sample for WSO2 Identity Server",
+    "description": "Javascript Authentication Sample for Asgardio / WSO2 Identity Server",
     "main": "index.js",
+    "keywords": [
+        "Asgardio",
+        "WSO2",
+        "WSO2 IS",
+        "WSO2 Identity Server",
+        "WSO2 Identity Apps",
+        "OIDC",
+        "SDK",
+        "Sample",
+        "Javascript",
+        "Authenticate"
+    ],
+    "repository": "https://github.com/wso2-extensions/identity-samples-js.git",
     "author": "WSO2",
     "license": "Apache-2.0",
-    "private": "false",
+    "private": false,
     "scripts": {
         "start": "yarn serve"
     },

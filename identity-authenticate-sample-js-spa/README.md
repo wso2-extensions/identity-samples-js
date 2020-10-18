@@ -1,10 +1,12 @@
 # WSO2 Identity Server - OIDC JS-SDK Usage Example (React SPA)
 
-WSO2 Identity Server Integration exmaple using the OIDC JS SDK. Sample is written using React.
+WSO2 Identity Server Integration example using the OIDC JS SDK. Sample is written using React.
 
 ---
 
 ## Getting started
+
+**NOTE:- Ignore this if you are connecting to Asgardio cloud. In Asgardio you can add `http://localhost5000` allow origin from the UI**
 
 First thing we need to do is let WSO2 Identity Server knows that we are accessing the server using a external origin (CORS). 
 Add below lines to the **`[wso2-is]/repository/resources/conf/templates/repository/conf/tomcat/web.xml.j2`**
@@ -35,15 +37,17 @@ Add below lines to the **`[wso2-is]/repository/resources/conf/templates/reposito
 </filter-mapping>
 ```
 
-### 1. Register an Application
+### 1. Register an Applications
+
+Run De### 1. Register an Application
 
 Run Developer Portal and register a Single Page Application with minimal configuration. 
 Give `http://localhost:5000` as the callback URL.
 
 ### 2. Setup the sample
 
-* Run `yarn` or `npm install`.
-* Update configuration file `src/config.json` with your registered app details.
+1. Run `yarn` or `npm install`
+2. Update configuration file `src/config.json` with your registered app details
 
     __REFERENCE__
 
@@ -57,16 +61,14 @@ Give `http://localhost:5000` as the callback URL.
         "serverOrigin": "",
 
         // NOTE: Add below config if running on tenant mode
-        "tenant": "", // E.g. "organization.com"
-        "tenantPath": "" // E.g. "/t/organization.com"
+        "tenant": "", // E.g. "organization"
+        "tenantPath": "" // E.g. "/t/organization"
     };
     ```
 
 ### 3. Run
 
-* Run `yarn start` or `npm start` if you use `npm` instead `yarn` for dependencies install.
-* Navigate to `http://localhost:5000` from the browser.
-
-## License
-
-Licenses this source under the Apache License, Version 2.0 ([LICENSE](LICENSE)), You may not use this file except in compliance with the License.
+3. If this is the first time, run `yarn` to install dependencies. (Do only once)
+4. Run `yarn start`
+5. Navigate to `http://localhost:5000` from the browser
+ ([LICENSE](LICENSE)), You may not use this file except in compliance with the License.

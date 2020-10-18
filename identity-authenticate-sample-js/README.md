@@ -6,6 +6,8 @@ Vanilla JS authentication usage sample app
 
 ## Getting started
 
+**NOTE:- Ignore this if you are connecting to Asgardio cloud. In Asgardio you can add `http://localhost5000` allow origin from the UI** 
+
 First thing we need to do is let WSO2 Identity Server knows that we are accessing the server using a external origin (CORS). Add below lines to the **`[wso2-is]/repository/resources/conf/templates/repository/conf/tomcat/web.xml.j2`**
 
 ```xml
@@ -49,8 +51,9 @@ First thing we need to do is let WSO2 Identity Server knows that we are accessin
     };
     ```
 
-3. run `yarn start`
-4. Visit `http://localhost:5000` on browser
+3. If this is the first time, run `yarn` to install dependencies. (Do only once)
+4. Run `yarn start`
+5. Navigate to `http://localhost:5000` from the browser
 
 ## License
 
