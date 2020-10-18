@@ -37,17 +37,14 @@ Add below lines to the **`[wso2-is]/repository/resources/conf/templates/reposito
 </filter-mapping>
 ```
 
-### 1. Register an Applications
-
-Run De### 1. Register an Application
+### Register an Applications
 
 Run Developer Portal and register a Single Page Application with minimal configuration. 
 Give `http://localhost:5000` as the callback URL.
 
-### 2. Setup the sample
+### Setup and run sample
 
-1. Run `yarn` or `npm install`
-2. Update configuration file `src/config.json` with your registered app details
+1. Update configuration file `src/config.json` with your registered app details
 
     __REFERENCE__
 
@@ -66,9 +63,10 @@ Give `http://localhost:5000` as the callback URL.
     };
     ```
 
-### 3. Run
+2. If this is the first time, run `yarn` to install dependencies. (Do only once)
+3. Run `yarn start`
+4. Navigate to `http://localhost:5000` from the browser
 
-3. If this is the first time, run `yarn` to install dependencies. (Do only once)
-4. Run `yarn start`
-5. Navigate to `http://localhost:5000` from the browser
- ([LICENSE](LICENSE)), You may not use this file except in compliance with the License.
+## License
+
+Licenses this source under the Apache License, Version 2.0 ([LICENSE](LICENSE)), You may not use this file except in compliance with the License.
