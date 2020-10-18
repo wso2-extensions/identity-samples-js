@@ -6,6 +6,8 @@ Vanilla JS authentication usage sample app
 
 ## Getting started
 
+**NOTE:- Ignore this if you are connecting to Asgardio cloud. In Asgardio cloud you can add `http://localhost5000` to allow origins from the UI** 
+
 First thing we need to do is let WSO2 Identity Server knows that we are accessing the server using a external origin (CORS). Add below lines to the **`[wso2-is]/repository/resources/conf/templates/repository/conf/tomcat/web.xml.j2`**
 
 ```xml
@@ -34,23 +36,35 @@ First thing we need to do is let WSO2 Identity Server knows that we are accessin
 </filter-mapping>
 ```
 
-### Runnig the sample
+### Register an Application
 
-1. Run `yarn install`
-2. Update your configurations in `index.html` with WSO2 Identity Server App Register details.
+Run Developer Portal and register a Web Application with minimal configuration. 
+Give `http://localhost:5000` as the callback URL.
+
+### Setup and run sample
+
+1. Update your configurations in `index.html` with WSO2 Identity Server App Register details.
 
     E.g.
 
     ```javascript
     const authConfig = {
         ...
-        // ClientID generated for the application
-        clientID: "uxRd9AqFa3Blp1ASvKYaUizU7pca",
+        // ClientID generated for the application. E.g. "uxRd9AqFa3Blp1ASvKYaUizU7pca"
+        clientID: "",
+
+        // WSO2 Identity Server URL. Default: https://localhost:9443
+        "serverOrigin": "",
+
+        // NOTE: Add below config if running on tenant mode
+        "tenant": "", // E.g. "organization"
+        "tenantPath": "" // E.g. "/t/organization"
     };
     ```
 
-3. run `yarn start`
-4. Visit `http://localhost:5000` on browser
+2. If this is the first time, run `yarn` to install dependencies. (Do only once)
+3. Run `yarn start`
+4. Navigate to `http://localhost:5000` from the browser
 
 ## License
 

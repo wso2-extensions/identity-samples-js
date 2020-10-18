@@ -1,10 +1,12 @@
 # WSO2 Identity Server - OIDC JS-SDK Usage Example (React SPA)
 
-WSO2 Identity Server Integration exmaple using the OIDC JS SDK. Sample is written using React.
+WSO2 Identity Server Integration example using the OIDC JS SDK. Sample is written using React.
 
 ---
 
 ## Getting started
+
+**NOTE:- Ignore this if you are connecting to Asgardio cloud. In Asgardio cloud you can add `http://localhost5000` to allow origins from the UI**
 
 First thing we need to do is let WSO2 Identity Server knows that we are accessing the server using a external origin (CORS). 
 Add below lines to the **`[wso2-is]/repository/resources/conf/templates/repository/conf/tomcat/web.xml.j2`**
@@ -35,15 +37,14 @@ Add below lines to the **`[wso2-is]/repository/resources/conf/templates/reposito
 </filter-mapping>
 ```
 
-### 1. Register an Application
+### Register an Application
 
 Run Developer Portal and register a Single Page Application with minimal configuration. 
 Give `http://localhost:5000` as the callback URL.
 
-### 2. Setup the sample
+### Setup and run sample
 
-* Run `yarn` or `npm install`.
-* Update configuration file `src/config.json` with your registered app details.
+1. Update configuration file `src/config.json` with your registered app details
 
     __REFERENCE__
 
@@ -57,15 +58,14 @@ Give `http://localhost:5000` as the callback URL.
         "serverOrigin": "",
 
         // NOTE: Add below config if running on tenant mode
-        "tenant": "", // E.g. "organization.com"
-        "tenantPath": "" // E.g. "/t/organization.com"
+        "tenant": "", // E.g. "organization"
+        "tenantPath": "" // E.g. "/t/organization"
     };
     ```
 
-### 3. Run
-
-* Run `yarn start` or `npm start` if you use `npm` instead `yarn` for dependencies install.
-* Navigate to `http://localhost:5000` from the browser.
+2. If this is the first time, run `yarn` to install dependencies. (Do only once)
+3. Run `yarn start`
+4. Navigate to `http://localhost:5000` from the browser
 
 ## License
 
