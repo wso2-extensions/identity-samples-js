@@ -1,6 +1,6 @@
 # WSO2 Identity Server Javascript Implementation Samples
 
-Javascript SDKs usage exmaples
+Javascript SDKs usage examples
 
 - [identity-authenticate-sample-js](identity-authenticate-sample-js/)
 - [identity-authenticate-sample-js-spa](identity-authenticate-sample-js-spa/)

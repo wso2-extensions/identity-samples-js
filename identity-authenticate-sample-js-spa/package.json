@@ -1,8 +1,9 @@
 {
-    "name": "@wso2/identity-authenticate-sample-js-spa",
+    "name": "@asgardio/identity-authenticate-sample-js-spa",
     "version": "0.1.1",
-    "description": "React based sample SPA to demostrate WSO2 Indentity Server OIDC Javascript SDK module usage",
+    "description": "React based sample SPA to demostrate Asgardio/WSO2 Indentity Server OIDC Javascript SDK module usage",
     "keywords": [
+        "Asgardio",
         "WSO2",
         "WSO2 IS",
         "WSO2 Identity Server",
@@ -21,7 +22,7 @@
         "start": "webpack-dev-server --mode development --inline --hot --open"
     },
     "dependencies": {
-        "@wso2/identity-oidc-js": "^0.1.0",
+        "@asgardio/oidc-js": "^0.1.11",
         "react": "^16.13.1",
         "react-dom": "^16.13.1"
     },

@@ -1,7 +1,7 @@
 {
     "clientHost": "http://localhost:5000",
     "clientID": "",
-    "loginCallbackURL": "http://localhost:5000",
-    "logoutCallbackURL": "http://localhost:5000",
+    "signInRedirectURL": "http://localhost:5000",
+    "signOutRedirectURL": "http://localhost:5000",
     "serverOrigin": "https://localhost:9443"
 }
