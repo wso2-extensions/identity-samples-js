@@ -36,7 +36,7 @@ First thing we need to do is let WSO2 Identity Server knows that we are accessin
 </filter-mapping>
 ```
 
-### Register an Applications
+### Register an Application
 
 Run Developer Portal and register a Web Application with minimal configuration. 
 Give `http://localhost:5000` as the callback URL.
