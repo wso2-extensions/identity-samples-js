@@ -1,3 +1,9 @@
+# DEPRECATION NOTICE
+
+This repository is deprecated and all the work has been moved to the following repository location.
+
+- https://github.com/asgardeo/asgardeo-auth-spa-sdk/tree/main/samples
+
 # WSO2 Identity Server Javascript Implementation Samples
 
 Javascript SDKs usage examples
